@@ -35,7 +35,7 @@
         window.addEventListener('load', function() {
           
           //register service worker
-          navigator.serviceWorker.register('/sw.js').then(function(registration) {
+          navigator.serviceWorker.register('./sw.js').then(function(registration) {
             console.log('ServiceWorker registration successful with scope: ', registration.scope);
           }, function(err) {
             console.log('ServiceWorker registration failed: ', err);
@@ -55,7 +55,7 @@
           //  if available, service worker fetch event will intercept svg request and respond with orange fill vs. purple in file
           Promise.race( [svgLoadPromise , navigator.serviceWorker.ready ] ).then( () => {
             console.log('svg timeout expired or serviceWorker ready - loading svg');
-            document.querySelector('.loader').innerHTML = '<object data="/dc.svg" type="image/svg+xml"></object>';
+            document.querySelector('.loader').innerHTML = '<object data="./dc.svg" type="image/svg+xml"></object>';
           });
           
         });
