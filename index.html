@@ -2,19 +2,21 @@
 <html>
   <head>
     <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Service Workers Playground</title>
   </head>
   <body>
   
   <script type="text/javascript">
-   function autorun()
-   {
-    
-   }
-   if (document.addEventListener) document.addEventListener("DOMContentLoaded", autorun, false);
-   else if (document.attachEvent) document.attachEvent("onreadystatechange", autorun);
-   else window.onload = autorun;
+   
+    function autorun(){
+      document.body.innerHTML = "autorun"
+    }
+
+    if (document.addEventListener) document.addEventListener("DOMContentLoaded", autorun, false);
+    else if (document.attachEvent) document.attachEvent("onreadystatechange", autorun);
+    else window.onload = autorun;
+
   </script>
   </body>
 </html>
